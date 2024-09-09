@@ -1,0 +1,8 @@
+modules = ["nodejs-20"]
+run = "cd typescript-node-service && yarn && yarn test"
+
+[nix]
+channel = "stable-24_05"
+
+[deployment]
+run = ["sh", "-c", "cd typescript-node-service && yarn && yarn test"]
